@@ -1,66 +1,32 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحكم في الفيديوهات</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .video-container {
-            margin: 15px 0;
-            width: 100%;
-            max-width: 800px;
-        }
-        video {
-            width: 100%;
-            border: 2px solid #333;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>عرض فيديوهين</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>مشغل الفيديوهات المتبادل</h1>
-    
-    <div class="video-container">
-        <video id="video1" controls>
-            <source src="video.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
-    </div>
-    
-    <div class="video-container">
-        <video id="video2" controls>
-            <source src="test.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
+
+  <h1 class="title">عرض فيديوهين</h1>
+
+  <div class="video-container">
+    <div class="video-box">
+      <video id="video1" controls>
+        <source src="v/video.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
     </div>
 
-    <script>
-        const video1 = document.getElementById('video1');
-        const video2 = document.getElementById('video2');
+    <div class="video-box">
+      <video id="video2" controls>
+        <source src="v/test.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
+    </div>
+  </div>
 
-        // عند تشغيل الفيديو الأول
-        video1.addEventListener('play', function() {
-            video2.pause(); // إيقاف الفيديو الثاني
-            video2.currentTime = 0; // إعادة الفيديو الثاني إلى البداية
-        });
+  <script src="script.js"></script>
 
-        // عند تشغيل الفيديو الثاني
-        video2.addEventListener('play', function() {
-            video1.pause(); // إيقاف الفيديو الأول
-            video1.currentTime = 0; // إعادة الفيديو الأول إلى البداية
-        });
-    </script>
 </body>
-</html>
+</html>￼Enter
